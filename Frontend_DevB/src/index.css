@@ -1,0 +1,85 @@
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 222 47% 11%;
+    --foreground: 210 40% 98%;
+
+    --card: 222 47% 13%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222 47% 11%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 199 89% 60%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 217 32% 17%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217 32% 17%;
+    --muted-foreground: 215 20% 75%;
+
+    --accent: 217 32% 18%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62% 65%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217 32% 17%;
+    --input: 217 32% 17%;
+    --ring: 224 76% 48%;
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 220 33% 9%;
+    --sidebar-foreground: 210 40% 98%;
+    --sidebar-primary: 199 89% 60%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 218 33% 14%;
+    --sidebar-accent-foreground: 210 40% 98%;
+    --sidebar-border: 223 31% 20%;
+    --sidebar-ring: 224 76% 48%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+@layer components {
+  .log-line {
+    @apply py-1 font-mono text-sm;
+  }
+
+  .log-line-success {
+    @apply text-devbeacons-success;
+  }
+
+  .log-line-warning {
+    @apply text-devbeacons-warning;
+  }
+
+  .log-line-error {
+    @apply text-devbeacons-error;
+  }
+
+  .glass-panel {
+    @apply bg-black/20 backdrop-blur-sm border border-white/10 rounded-lg;
+  }
+
+  .glass-button {
+    @apply bg-white/10 hover:bg-white/20 backdrop-blur-sm border border-white/10 rounded-lg transition-all duration-200;
+  }
+}
